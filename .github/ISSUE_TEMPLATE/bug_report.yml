@@ -1,0 +1,35 @@
+name: Product bug / 产品问题
+description: Report a non-sensitive issue. Do not attach order data, passwords or license files.
+title: '[Bug] '
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: 'For security vulnerabilities, use private vulnerability reporting rather than public Issues. Do not share private keys, customer data, passwords or tokens.'
+  - type: input
+    id: version
+    attributes:
+      label: Version / 版本
+      placeholder: 'e.g., V1.2.x'
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Platform / 平台
+      options: ['macOS', 'Windows 11', 'Windows 10', 'Phone/tablet via LAN', 'Other']
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce / 复现步骤（脱敏）
+      description: No real accounts, orders, personal details, setup codes or license JSON.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behavior / 预期与实际
+    validations:
+      required: true
